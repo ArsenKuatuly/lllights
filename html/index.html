@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css" />
+    <title>ll lights</title>
+</head>
+<body>
+<header class="header">
+  <div class="header__container">
+    <div class="header__logo">
+      <a href="index.html"><img class="header__logo__img" src="../images/header/logo.png" alt="II lights logo"></a>
+    </div>
+
+    <nav class="header__nav">
+      <ul class="header__nav__list">
+        <li><a href="company.html">О компании</a></li>
+        <li><a href="uslugi.html">Услуги</a></li>
+        <li><a href="#">Проекты</a></li>
+        <li><a href="#">Доставка и оплата</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li class="header__nav__highlight"><a href="#">Подборка</a></li>
+        <li><img class="header__nav__img" src="../images/header/plus.png"></li>
+      </ul>
+    </nav>
+
+    <div class="header__contacts">
+      <a href="mailto:info@ii-lights.ru" class="header__email"> info@ii-lights.ru</a>
+      <a href="tel:+74952335557" class="header__phone"> +7 (495) 233 55 57</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero__container">
+  <div class="hero__content">
+    <h1><span>I-LIGHTS</span> – Эффективные решения</h1>
+    <p>
+      Компания I-Lights — это современная производственно-проектная организация с многолетним опытом работы в сфере разработки.
+    </p>
+    <a href="company.html"><button class="hero__btn">Подробнее</button></a>
+  </div>
+
+  <div class="hero__slider">
+    <div class="hero__slides">
+      <img src="../images/hero/slide-img1.png" class="active" alt="Интерьер 1">
+      <img src="../images/hero/slide-img2.jpg" alt="Интерьер 2">
+      <img src="../images/hero/slide-img3.jpg" alt="Интерьер 3">
+    </div>
+    <div class="hero__controls">
+      <button id="prevSlide">‹</button>
+      <button id="nextSlide">›</button>
+    </div>
+    <div class="hero__progress"></div>
+  </div>
+  </div>
+</section>
+
+<section class="catalog">
+  <div class="catalog__container">
+
+    <div class="catalog__left">
+      <h2 class="catalog__title">
+        Каталог
+      </h2>
+
+      <div class="catalog__subtitle">
+        <h3 class="catalog__highlight">Трековые светильники</h3>
+        <p class="catalog__desc">
+          Органично вписываются в интерьеры в стиле хай-тек, лофт
+        </p>
+        <a href="catalog.html"><button class="catalog__btn">Перейти в каталог</button></a>
+      </div>
+
+      <ul class="catalog__list">
+        <li>Встраиваемые светильники</li>
+        <li>Фигурные светильники</li>
+        <li>Светильники Армстронг</li>
+        <li>Светильники Армстронг с равномерной засветкой</li>
+      </ul>
+    </div>
+
+    <!-- Правая часть с единой картинкой и наложенными блоками -->
+    <div class="catalog__right">
+      <div class="catalog__background">
+        <img src="../images/catalog/catalog-full.png" alt="Каталог" class="catalog__image" />
+
+        <!-- Наложенные карточки -->
+        <div class="catalog__overlay catalog__overlay--arco">
+          <span>Arco</span>
+          <button>+</button>
+        </div>
+        <div class="catalog__overlay catalog__overlay--evo-m">
+          <span>Evo M</span>
+          <button>+</button>
+        </div>
+        <div class="catalog__overlay catalog__overlay--evo-l">
+          <span>Evo L</span>
+          <button>+</button>
+        </div>
+        <div class="catalog__overlay catalog__overlay--alfa">
+          <span>Alfa</span>
+          <button>+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="services__container">
+    <div class="services__content">
+      <h2 class="services__title">Услуги</h2>
+
+      <div class="service active">
+        <div class="service__header">
+          <img src="../images/services/img1.png" alt="" class="service__icon" />
+          <h3 class="service__title">Изготовление светильников для торгового и общественного освещения</h3>
+          <button class="service__toggle">×</button>
+        </div>
+        <div class="service__description">
+          <p>
+            Мы ценим Ваше время, поэтому, коротко о главном. Наша компания была образована с целью предложить Российскому рынку профессиональные светотехнические решения для освещения магазинов, офисов и объектов общественно-развлекательного назначения...
+          </p>
+        </div>
+      </div>
+
+      <div class="service">
+        <div class="service__header">
+          <img src="../images/services/img2.png" alt="" class="service__icon" />
+          <h3 class="service__title">Поставки дизайнерского света от ведущих европейских производителей</h3>
+          <button class="service__toggle">+</button>
+        </div>
+      </div>
+
+      <div class="service">
+        <div class="service__header">
+          <img src="../images/services/img3.png" alt="" class="service__icon" />
+          <h3 class="service__title">Проектирование, светотехнические расчеты и разработка концепции освещения</h3>
+          <button class="service__toggle">+</button>
+        </div>
+      </div>
+
+      <div class="service">
+        <div class="service__header">
+          <img src="../images/services/img4.png" alt="" class="service__icon" />
+          <h3 class="service__title">Модернизация светильников</h3>
+          <button class="service__toggle">+</button>
+        </div>
+      </div>
+
+      <div class="service">
+        <div class="service__header">
+          <img src="../images/services/img5.png" alt="" class="service__icon" />
+          <h3 class="service__title">Ремонт светодиодных светильников</h3>
+          <button class="service__toggle">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="products">
+  <div class="products__container">
+
+    <h2 class="products__title">Новинки</h2>
+    <div class="products__content">
+
+
+      <div class="product-card">
+        <div class="product-card__label">Вт</div>
+        <img src="../images/products/img1.png" alt="Светильник 1" class="product-card__image" />
+        <h3 class="product-card__title">Дизайнерский светильник<br>изготавливаемый по проекту</h3>
+        <ul class="product-card__features">
+          <li>Длина до 3 метров.</li>
+          <li>Углы поворота между секторами по проекту.</li>
+          <li>Мощность рассчитывается индивидуально.</li>
+        </ul>
+        <div class="product-card__price">21 300 ₽</div>
+        <div class="product-card__footer">
+          <button class="product-card__button">Подробнее</button>
+          <span class="product-card__icon">+</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card__label">Вт</div>
+        <img src="../images/products/img2.png" alt="Светильник 1" class="product-card__image__img2" />
+        <h3 class="product-card__title">Дизайнерский светильник<br>изготавливаемый по проекту</h3>
+        <ul class="product-card__features">
+          <li>Длина до 3 метров.</li>
+          <li>Углы поворота между секторами по проекту.</li>
+          <li>Мощность рассчитывается индивидуально.</li>
+        </ul>
+        <div class="product-card__price">41 500 ₽</div>
+        <div class="product-card__footer">
+          <button class="product-card__button">Подробнее</button>
+          <span class="product-card__icon">+</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card__label">Вт</div>
+        <img src="../images/products/img1.png" alt="Светильник 1" class="product-card__image" />
+        <h3 class="product-card__title">Дизайнерский светильник<br>изготавливаемый по проекту</h3>
+        <ul class="product-card__features">
+          <li>Длина до 3 метров.</li>
+          <li>Углы поворота между секторами по проекту.</li>
+          <li>Мощность рассчитывается индивидуально.</li>
+        </ul>
+        <div class="product-card__price">21 800 ₽</div>
+        <div class="product-card__footer">
+          <button class="product-card__button">Подробнее</button>
+          <span class="product-card__icon">+</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card__label">Вт</div>
+        <img src="../images/products/img1.png" alt="Светильник 1" class="product-card__image" />
+        <h3 class="product-card__title">Дизайнерский светильник<br>изготавливаемый по проекту</h3>
+        <ul class="product-card__features">
+          <li>Длина до 3 метров.</li>
+          <li>Углы поворота между секторами по проекту.</li>
+          <li>Мощность рассчитывается индивидуально.</li>
+        </ul>
+        <div class="product-card__price">37 900 ₽</div>
+        <div class="product-card__footer">
+          <button class="product-card__button">Подробнее</button>
+          <span class="product-card__icon">+</span>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="products__catalog-button">
+      <a href="catalog.html" class="catalog-button">Перейти в каталог</a>
+    </div>
+  </div>
+</section>
+
+
+<div class="downloads_container">
+<div class="downloads">
+  <div class="downloads__icon">
+    <img src="../images/downloads/file.png" alt="Иконка документа" />
+  </div>
+  <div class="downloads__content">
+    <h2 class="downloads__title">Файлы для скачивания</h2>
+    <ul class="downloads__list">
+      <li class="downloads__item">
+        <span class="downloads__text">Последние версии каталогов</span>
+        <div class="downloads__actions">
+          <a href="catalog.html" class="downloads__link">Посмотреть</a>
+          <a href="#" class="downloads__link">
+            Скачать <span class="downloads__icon-download">↓</span>
+          </a>
+        </div>
+      </li>
+      <li class="downloads__item">
+        <span class="downloads__text">Технические спецификации</span>
+        <div class="downloads__actions">
+          <a href="#" class="downloads__link">Посмотреть</a>
+          <a href="#" class="downloads__link">
+            Скачать <span class="downloads__icon-download">↓</span>
+          </a>
+        </div>
+      </li>
+      <li class="downloads__item downloads__item--disabled">
+        <span class="downloads__text">IES-файлы и прочая документация</span>
+        <div class="downloads__actions">
+          <span class="downloads__link downloads__link--disabled">Посмотреть</span>
+          <span class="downloads__link downloads__link--disabled">
+            Скачать <span class="downloads__icon-download">↓</span>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+
+
+<section class="questions">
+  <div class="reviews__container">
+    <div class="reviews__content">
+      <div class="questions__info">
+        <div class="questions__icon-wrap">
+          <img src="../images/downloads/question.png" alt="Вопрос" class="questions__icon">
+        </div>
+        <h2>Остались вопросы и нужна консультация?</h2>
+      </div>
+      <form class="questions__form">
+        <input type="text" placeholder="Ваше имя*" required>
+        <input type="email" placeholder="Ваш e-mail*" required>
+        <textarea placeholder="Сообщение"></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__column footer__logo">
+      <img src="../images/footer/logo.png" alt="Lights Logo" class="footer__logo-img">
+      <p>© Technolight 2015–2021</p>
+    </div>
+
+    <div class="footer__column">
+      <h4>Каталог товаров</h4>
+      <ul>
+        <li><a href="#">Трековые светильники</a></li>
+        <li><a href="#">Встраиваемые светильники</a></li>
+        <li><a href="#">Профильные светильники</a></li>
+        <li><a href="#">Фигурные светильники</a></li>
+        <li><a href="#">Светильники Армстронг</a></li>
+        <li><a href="#">Армстронг с равномерной засветкой</a></li>
+        <li><a href="#">Производители</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__column">
+      <h4>Как заказать</h4>
+      <ul>
+        <li><a href="#">Оплата</a></li>
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Реквизиты компании</a></li>
+        <li><a href="#">Правовая информация</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__column">
+      <h4>Контакты</h4>
+      <ul class="footer__contacts">
+        <li><span class="icon icon-location"></span> место магазина</li>
+        <li><span class="icon icon-phone"></span> +7 (495) 233 55 57</li>
+        <li><span class="icon icon-mail"></span> info@i-lights.ru</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+<script src="../javascript/hero.js"></script>
+<script src="../javascript/services.js"></script>
+<script src="../javascript/services-plus.js"></script>
+
+</body>
+</html>

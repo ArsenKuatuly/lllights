@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css" />
+  <title>Title</title>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__container">
+    <div class="header__logo">
+      <a href="index.html"><img class="header__logo__img" src="../images/header/logo.png" alt="II lights logo"></a>
+    </div>
+
+    <nav class="header__nav">
+      <ul class="header__nav__list">
+        <li><a href="company.html">О компании</a></li>
+        <li><a href="uslugi.html">Услуги</a></li>
+        <li><a href="#">Проекты</a></li>
+        <li><a href="#">Доставка и оплата</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li class="header__nav__highlight"><a href="#">Подборка</a></li>
+        <li><img class="header__nav__img" src="../images/header/plus.png"></li>
+      </ul>
+    </nav>
+
+    <div class="header__contacts">
+      <a href="mailto:info@ii-lights.ru" class="header__email"> info@ii-lights.ru</a>
+      <a href="tel:+74952335557" class="header__phone"> +7 (495) 233 55 57</a>
+    </div>
+
+  </div>
+</header>
+<div class="breadcrumbs">
+  <a href="index.html">Главная</a> <span class="breadcrumbs__separator">–</span> <span>Подборка</span>
+</div>
+
+<section class="company">
+  <div class="company__container">
+    <h2 class="company__title">Доставка и оплата</h2>
+
+    <div class="tabs">
+      <div class="tabs__header">
+        <button class="tabs__button active" data-tab="tab-1">Физическим лицам</button>
+        <button class="tabs__button" data-tab="tab-2">Юридическим лицам</button>
+        <button class="tabs__button" data-tab="tab-3">Бюджетным организациям</button>
+      </div>
+
+      <div class="tabs__content">
+        <div id="tab-1" class="tabs__pane active">
+          <div class="delivery">
+            <div class="delivery__container">
+
+              <div class="delivery__block">
+                <h3>По Москве</h3>
+                <p>Доставка в течение 1 дня после подтверждения заказа. Оплата может производиться как наличными курьеру, так и путем перечисления денежных средств на счет организации с банковского счета физ. лица или через кассу любого банка.</p>
+
+                <div class="delivery__steps">
+                  <div class="delivery__step">
+                    <div class="delivery__number">1</div>
+                    <p>Оформляете заявку в любой из форм на нашем сайте. Укажите телефон или адрес электронной почты для обратной связи.<br><br>
+                      Либо заявку можно оформить по телефону <a href="tel:+74952135557"><strong>8 495 213 55 57</strong></a>
+                    </p>
+                  </div>
+                  <div class="delivery__step">
+                    <div class="delivery__number">2</div>
+                    <p>Менеджер оформляет заказ, вы согласовываете порядок доставки и оплаты с ним.</p>
+                  </div>
+                  <div class="delivery__step">
+                    <div class="delivery__number">3</div>
+                    <p>Получаете изделие выбранным вами способом.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="delivery__block">
+                <h3>В регионы</h3>
+                <p>Доставка через транспортные компании Деловые Линии, ПЭК, СДЭК в течение 2–7 дней с момента отправки. Возможна как адресная доставка, так и получение в пункте самовывоза в вашем городе.</p>
+
+                <form class="delivery__form">
+                  <input type="text" name="name" placeholder="Ваше имя*" required />
+                  <input type="tel" name="phone" placeholder="Ваш телефон*" required />
+                  <button type="submit">Отправить</button>
+                </form>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div id="tab-2" class="tabs__pane">
+          <p>Мы предоставляем комплекс услуг: от проектирования и подбора оборудования до реализации концепции освещения.</p>
+        </div>
+        <div id="tab-3" class="tabs__pane">
+          <p>Мы поставляем оборудование от ведущих мировых и российских производителей для различных типов объектов.</p>
+        </div>
+        <div id="tab-4" class="tabs__pane">
+          <p>Реквизиты компании доступны по запросу. Свяжитесь с нами для получения подробной информации.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__column footer__logo">
+      <img src="../images/footer/logo.png" alt="Lights Logo" class="footer__logo-img">
+      <p>© Technolight 2015–2021</p>
+    </div>
+
+    <div class="footer__column">
+      <h4>Каталог товаров</h4>
+      <ul>
+        <li><a href="#">Трековые светильники</a></li>
+        <li><a href="#">Встраиваемые светильники</a></li>
+        <li><a href="#">Профильные светильники</a></li>
+        <li><a href="#">Фигурные светильники</a></li>
+        <li><a href="#">Светильники Армстронг</a></li>
+        <li><a href="#">Армстронг с равномерной засветкой</a></li>
+        <li><a href="#">Производители</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__column">
+      <h4>Как заказать</h4>
+      <ul>
+        <li><a href="#">Оплата</a></li>
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Реквизиты компании</a></li>
+        <li><a href="#">Правовая информация</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__column">
+      <h4>Контакты</h4>
+      <ul class="footer__contacts">
+        <li><span class="icon icon-location"></span> место магазина</li>
+        <li><span class="icon icon-phone"></span> +7 (495) 233 55 57</li>
+        <li><span class="icon icon-mail"></span> info@i-lights.ru</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+<script src="../javascript/company.js"></script>
+
+
+</body>
