@@ -1,21 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".service__toggle");
+document.addEventListener("DOMContentLoaded", () => {
+    const services = document.querySelectorAll(".service");
 
-    buttons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            const service = button.closest(".service");
-            const isActive = service.classList.contains("active");
+    services.forEach(service => {
+        service.addEventListener("click", () => {
 
-            document.querySelectorAll(".service").forEach(function (s) {
-                s.classList.remove("active");
-                const toggle = s.querySelector(".service__toggle");
-                if (toggle) toggle.textContent = "+";
+            services.forEach(s => {
+                if (s !== service) s.classList.remove("active");
             });
 
-            if (!isActive) {
-                service.classList.add("active");
-                button.textContent = "×";
-            }
+
+            service.classList.toggle("active");
         });
     });
 });

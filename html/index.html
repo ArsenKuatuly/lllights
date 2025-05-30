@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
   <link rel="stylesheet" href="../styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ll lights</title>
 </head>
 <body>
 <header class="header">
   <div class="header__container">
     <div class="header__logo">
-      <a href="index.html"><img class="header__logo__img" src="../images/header/logo.png" alt="II lights logo"></a>
+      <a href="index.html">
+        <img class="header__logo__img" src="../images/header/logo.png" alt="II lights logo">
+      </a>
     </div>
 
-    <nav class="header__nav">
+
+    <button class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+
+    <nav class="header__nav" id="nav">
       <ul class="header__nav__list">
         <li><a href="company.html">О компании</a></li>
         <li><a href="uslugi.html">Услуги</a></li>
@@ -22,14 +33,32 @@
         <li class="header__nav__highlight"><a href="#">Подборка</a></li>
         <li><img class="header__nav__img" src="../images/header/plus.png"></li>
       </ul>
+
+
+      <div class="header__nav__contacts">
+        <a href="mailto:info@ii-lights.ru" class="contact email">
+          <img src="../images/header/mail.png" alt="Email"> info@ii-lights.ru
+        </a>
+        <a href="tel:+74952335557" class="contact phone">
+          <img src="../images/header/phone.png" alt="Phone"> +7 (495) 233 55 57
+        </a>
+      </div>
     </nav>
 
+
     <div class="header__contacts">
-      <a href="mailto:info@ii-lights.ru" class="header__email"> info@ii-lights.ru</a>
-      <a href="tel:+74952335557" class="header__phone"> +7 (495) 233 55 57</a>
+      <a href="mailto:info@ii-lights.ru" class="header__email">info@ii-lights.ru</a>
+      <a href="tel:+74952335557" class="header__phone">+7 (495) 233 55 57</a>
     </div>
   </div>
 </header>
+
+<script>
+  document.getElementById('burger').addEventListener('click', function () {
+    document.getElementById('nav').classList.toggle('open');
+  });
+</script>
+
 
 <section class="hero">
   <div class="hero__container">
@@ -42,6 +71,7 @@
   </div>
 
   <div class="hero__slider">
+    <img src="../images/hero/hero-mobile.png" alt="Мобильный баннер" class="hero__mobile-img">
     <div class="hero__slides">
       <img src="../images/hero/slide-img1.png" class="active" alt="Интерьер 1">
       <img src="../images/hero/slide-img2.jpg" alt="Интерьер 2">
@@ -64,28 +94,53 @@
         Каталог
       </h2>
 
-      <div class="catalog__subtitle">
-        <h3 class="catalog__highlight">Трековые светильники</h3>
-        <p class="catalog__desc">
-          Органично вписываются в интерьеры в стиле хай-тек, лофт
-        </p>
-        <a href="catalog.html"><button class="catalog__btn">Перейти в каталог</button></a>
-      </div>
-
       <ul class="catalog__list">
-        <li>Встраиваемые светильники</li>
-        <li>Фигурные светильники</li>
-        <li>Светильники Армстронг</li>
-        <li>Светильники Армстронг с равномерной засветкой</li>
+        <li class="catalog__item">
+          <div class="catalog__item-header">Трековые светильники</div>
+          <div class="catalog__item-body">
+            <p>Органично вписываются в интерьеры в стиле хай-тек, лофт</p>
+            <a href="catalog.html"><button class="catalog__btn">Перейти в каталог</button></a>
+          </div>
+        </li>
+        <li class="catalog__item">
+          <div class="catalog__item-header">Встраиваемые светильники</div>
+        </li>
+        <li class="catalog__item">
+          <div class="catalog__item-header">Фигурные светильники</div>
+        </li>
+        <li class="catalog__item">
+          <div class="catalog__item-header">Светильники Армстронг</div>
+        </li>
+        <li class="catalog__item">
+          <div class="catalog__item-header">Светильники Армстронг с равномерной засветкой</div>
+        </li>
       </ul>
     </div>
 
-    <!-- Правая часть с единой картинкой и наложенными блоками -->
+    <script>
+      document.querySelectorAll('.catalog__item-header').forEach(header => {
+        header.addEventListener('click', () => {
+          const parent = header.parentElement;
+
+          document.querySelectorAll('.catalog__item').forEach(item => {
+            if (item !== parent) {
+              item.classList.remove('open');
+            }
+          });
+
+
+          parent.classList.toggle('open');
+        });
+      });
+    </script>
+
+
+
     <div class="catalog__right">
       <div class="catalog__background">
         <img src="../images/catalog/catalog-full.png" alt="Каталог" class="catalog__image" />
 
-        <!-- Наложенные карточки -->
+
         <div class="catalog__overlay catalog__overlay--arco">
           <span>Arco</span>
           <button>+</button>
@@ -178,7 +233,7 @@
         </ul>
         <div class="product-card__price">21 300 ₽</div>
         <div class="product-card__footer">
-          <button class="product-card__button">Подробнее</button>
+          <a href="evol.html"><button class="product-card__button">Подробнее</button></a>
           <span class="product-card__icon">+</span>
         </div>
       </div>
@@ -194,7 +249,7 @@
         </ul>
         <div class="product-card__price">41 500 ₽</div>
         <div class="product-card__footer">
-          <button class="product-card__button">Подробнее</button>
+          <a href="evol.html"><button class="product-card__button">Подробнее</button></a>
           <span class="product-card__icon">+</span>
         </div>
       </div>
@@ -210,7 +265,7 @@
         </ul>
         <div class="product-card__price">21 800 ₽</div>
         <div class="product-card__footer">
-          <button class="product-card__button">Подробнее</button>
+          <a href="evol.html"><button class="product-card__button">Подробнее</button></a>
           <span class="product-card__icon">+</span>
         </div>
       </div>
@@ -226,7 +281,7 @@
         </ul>
         <div class="product-card__price">37 900 ₽</div>
         <div class="product-card__footer">
-          <button class="product-card__button">Подробнее</button>
+          <a href="evol.html"><button class="product-card__button">Подробнее</button></a>
           <span class="product-card__icon">+</span>
         </div>
       </div>
@@ -361,6 +416,7 @@
 <script src="../javascript/hero.js"></script>
 <script src="../javascript/services.js"></script>
 <script src="../javascript/services-plus.js"></script>
+
 
 </body>
 </html>

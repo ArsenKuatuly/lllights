@@ -3,17 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../styles.css" />
-  <title>ll lights - Услуги</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ll lights - О Компании</title>
 </head>
 <body>
-
 <header class="header">
   <div class="header__container">
     <div class="header__logo">
-      <a href="index.html"><img class="header__logo__img" src="../images/header/logo.png" alt="II lights logo"></a>
+      <a href="index.html">
+        <img class="header__logo__img" src="../images/header/logo.png" alt="II lights logo">
+      </a>
     </div>
 
-    <nav class="header__nav">
+
+    <button class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+
+    <nav class="header__nav" id="nav">
       <ul class="header__nav__list">
         <li><a href="company.html">О компании</a></li>
         <li><a href="uslugi.html">Услуги</a></li>
@@ -23,15 +33,31 @@
         <li class="header__nav__highlight"><a href="#">Подборка</a></li>
         <li><img class="header__nav__img" src="../images/header/plus.png"></li>
       </ul>
+
+
+      <div class="header__nav__contacts">
+        <a href="mailto:info@ii-lights.ru" class="contact email">
+          <img src="../images/header/mail.png" alt="Email"> info@ii-lights.ru
+        </a>
+        <a href="tel:+74952335557" class="contact phone">
+          <img src="../images/header/phone.png" alt="Phone"> +7 (495) 233 55 57
+        </a>
+      </div>
     </nav>
 
-    <div class="header__contacts">
-      <a href="mailto:info@ii-lights.ru" class="header__email"> info@ii-lights.ru</a>
-      <a href="tel:+74952335557" class="header__phone"> +7 (495) 233 55 57</a>
-    </div>
 
+    <div class="header__contacts">
+      <a href="mailto:info@ii-lights.ru" class="header__email">info@ii-lights.ru</a>
+      <a href="tel:+74952335557" class="header__phone">+7 (495) 233 55 57</a>
+    </div>
   </div>
 </header>
+
+<script>
+  document.getElementById('burger').addEventListener('click', function () {
+    document.getElementById('nav').classList.toggle('open');
+  });
+</script>
 <div class="breadcrumbs">
   <a href="index.html">Главная</a> <span class="breadcrumbs__separator">–</span> <span>Услуги</span>
 </div>
@@ -41,36 +67,47 @@
   <div class="company__container">
     <h2 class="company__title">Услуги</h2>
 
-    <div class="tabs">
-      <div class="tabs__header uslugi">
-        <button class="tabs__button uslugi active" data-tab="tab-1">Изготовление
-          светильников для торгового и общестыкнного освещения</button>
-        <button class="tabs__button uslugi" data-tab="tab-2">Постовки дизайнерского
-          свеата от ведущих европейских производителей</button>
-        <button class="tabs__button uslugi" data-tab="tab-3">Проектирование, светотехнические расчеты
-          и разработка концепции освещения</button>
-        <button class="tabs__button uslugi" data-tab="tab-4">Модернизация светильников</button>
-        <button class="tabs__button uslugi" data-tab="tab-5">Ремонт светодиоидных светильников</button>
+    <div class="tabs" data-tabs>
+      <div class="tabs__header">
+        <button class="tabs__button active" data-tab="tab-1">Кто мы</button>
+        <button class="tabs__button" data-tab="tab-2">В чем мы можем Вам помочь</button>
+        <button class="tabs__button" data-tab="tab-3">О продукции</button>
+        <button class="tabs__button" data-tab="tab-4">Реквизиты компании</button>
       </div>
 
       <div class="tabs__content">
-        <div id="tab-1" class="tabs__pane active">
-          <p>Мы ценим Ваше время, поэтому коротко о главном.</p>
-          <p>Наша компания была образована с целью предложить Российскому рынку профессиональные светотехнические решения для освещения магазинов, офисов и объектов общественно-развлекательного назначения. Сегодня мы поставляем осветительное оборудование различных ценовых категорий из стран Юго-Восточной Азии и Европы, а так же являемся дистрибьюторами лучших Российских производителей. А среди наших клиентов, сетевые и частные магазины одежды и обуви, продуктовые магазины, торговые и офисные центры, представители индустрии красоты и здоровья, кафе, рестораны, отели, коттеджные поселки и частные заказчики. </p>
+        <div id="tab-1" class="tabs__pane active" data-accordion>
+          <button class="accordion__title">Изготовление светильников
+            для торгового и общестыкнного освещения</button>
+          <div class="accordion__content">
+            <p>Мы ценим Ваше время, поэтому коротко о главном.</p>
+            <p>Наша компания была образована с целью предложить Российскому рынку профессиональные светотехнические решения...</p>
+          </div>
         </div>
-        <div id="tab-2" class="tabs__pane">
-          <p>Мы предоставляем полный комплекс услуг в освещении от идеи до поставки: проектируем, подбираем оборудование, разрабатываем концепцию освещения и осуществляем поставку.
-            Основная наша специализация - это коммерческое освещение, т.е. поставки освещения для тех мест, где люди работают, занимаются спортом, совершают покупки, проводят досуг и отдыхают. А стилистические направления, которые мы охватываем начинаются со специальных светильников для функционального использования и доходят до дизайнерских светильников от всемирно известных производителей.
-          </p>
+        <div id="tab-2" class="tabs__pane" data-accordion>
+          <button class="accordion__title">Постовки дизайнерского
+            свеата от ведущих европейских производителей</button>
+          <div class="accordion__content">
+            <p>Мы предоставляем комплекс услуг: от проектирования и подбора оборудования до реализации концепции освещения.</p>
+          </div>
         </div>
-        <div id="tab-3" class="tabs__pane">
-          <p>Обратившись в нашу компанию Вы, в первую очередь получите доброжелательный подход и профессиональный сервис в подборе оборудования для ваших задач. Мы поможем в проектировании, сделаем светотехнический расчет и осуществим поставку оборудования. Среди прочих услуг, которые мы оказываем можно выделить светодизайн, разработку концепции освещения, а так же мониторинг и модернизация существующих систем освещения. В состав проекта освещения входят расчет освещенности в специальных программах, предоставление планов расстановки осветительного оборудования и составление спецификации осветительных приборов. .</p>
+        <div id="tab-3" class="tabs__pane" data-accordion>
+          <button class="accordion__title">Проектирование, светотехнические расчеты и разработка концепции освещения</button>
+          <div class="accordion__content">
+            <p>Мы поставляем оборудование от ведущих мировых и российских производителей для различных типов объектов.</p>
+          </div>
         </div>
-        <div id="tab-4" class="tabs__pane">
-          <p>Концепция освещения и светодизайн нужны для решения задач связанных с созданием художественной или особой атмосферы за счет света. Мониторинг и модернизация освещения могут быть полезны при переходе со стандартного освещения на светодиодное. Мы можем рассчитать энергоэффективность и продумать как модернизировать существующие светильники для повышения их яркости и эффективности.</p>
+        <div id="tab-4" class="tabs__pane" data-accordion>
+          <button class="accordion__title">Модернизация светильников</button>
+          <div class="accordion__content">
+            <p>Реквизиты компании доступны по запросу. Свяжитесь с нами для получения подробной информации.</p>
+          </div>
         </div>
-        <div id="tab-5" class="tabs__pane">
-          <p>Реквизиты компании доступны по запросу. Свяжитесь с нами для получения подробной информации.</p>
+        <div id="tab-5" class="tabs__pane" data-accordion>
+          <button class="accordion__title">Ремонт светодиоидных светильников</button>
+          <div class="accordion__content">
+            <p>Реквизиты компании доступны по запросу. Свяжитесь с нами для получения подробной информации.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -81,9 +118,9 @@
 <section class="decisions">
   <div class="decisions__container">
     <h2 class="decisions__title">Наши решения</h2>
-    <div class="decisions__inner">
 
 
+    <div class="decisions__inner desktop-only">
       <nav class="decisions__nav">
         <ul class="decisions__nav-list">
           <li class="decisions__nav-item active" data-img="images/decisions/shop.jpg">Для магазинов</li>
@@ -94,12 +131,37 @@
           <li class="decisions__nav-item" data-img="images/decisions/home.jpg">Для жилых интерьеров</li>
         </ul>
       </nav>
-
-
       <div class="decisions__image">
         <img id="decisions-main-image" src="../images/decisions/shop.png" alt="Изображение решений">
       </div>
+    </div>
 
+
+    <div class="decisions__grid mobile-only">
+      <div class="decisions__card">
+        <img src="../images/decisions/mobile/shop.png" alt="Для магазинов">
+        <p>Для магазинов</p>
+      </div>
+      <div class="decisions__card">
+        <img src="../images/decisions/mobile/public.png" alt="Для общественных мест">
+        <p>Для общественных мест</p>
+      </div>
+      <div class="decisions__card">
+        <img src="../images/decisions/mobile/facade.png" alt="Для фасадов и ландшафтов">
+        <p>Для фасадов и ландшафтов</p>
+      </div>
+      <div class="decisions__card">
+        <img src="../images/decisions/mobile/cafe.png" alt="Для кафе и ресторанов">
+        <p>Для кафе и ресторанов</p>
+      </div>
+      <div class="decisions__card">
+        <img src="../images/decisions/mobile/office.png" alt="Для офисов">
+        <p>Для офисов</p>
+      </div>
+      <div class="decisions__card">
+        <img src="../images/decisions/mobile/home.png" alt="Для жилых интерьеров">
+        <p>Для жилых интерьеров</p>
+      </div>
     </div>
   </div>
 </section>
@@ -151,6 +213,7 @@
 
 
 <script src="../javascript/company.js"></script>
+<script src="../javascript/accordeon.js"></script>
 </body>
 </html>
 

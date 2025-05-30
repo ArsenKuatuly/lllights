@@ -3,17 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../styles.css" />
-  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ll lights - Каталог</title>
 </head>
 <body>
-
 <header class="header">
   <div class="header__container">
     <div class="header__logo">
-      <a href="index.html"><img class="header__logo__img" src="../images/header/logo.png" alt="II lights logo"></a>
+      <a href="index.html">
+        <img class="header__logo__img" src="../images/header/logo.png" alt="II lights logo">
+      </a>
     </div>
 
-    <nav class="header__nav">
+
+    <button class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+
+    <nav class="header__nav" id="nav">
       <ul class="header__nav__list">
         <li><a href="company.html">О компании</a></li>
         <li><a href="uslugi.html">Услуги</a></li>
@@ -23,21 +33,66 @@
         <li class="header__nav__highlight"><a href="#">Подборка</a></li>
         <li><img class="header__nav__img" src="../images/header/plus.png"></li>
       </ul>
+
+
+      <div class="header__nav__contacts">
+        <a href="mailto:info@ii-lights.ru" class="contact email">
+          <img src="../images/header/mail.png" alt="Email"> info@ii-lights.ru
+        </a>
+        <a href="tel:+74952335557" class="contact phone">
+          <img src="../images/header/phone.png" alt="Phone"> +7 (495) 233 55 57
+        </a>
+      </div>
     </nav>
 
-    <div class="header__contacts">
-      <a href="mailto:info@ii-lights.ru" class="header__email"> info@ii-lights.ru</a>
-      <a href="tel:+74952335557" class="header__phone"> +7 (495) 233 55 57</a>
-    </div>
 
+    <div class="header__contacts">
+      <a href="mailto:info@ii-lights.ru" class="header__email">info@ii-lights.ru</a>
+      <a href="tel:+74952335557" class="header__phone">+7 (495) 233 55 57</a>
+    </div>
   </div>
 </header>
+
+<script>
+  document.getElementById('burger').addEventListener('click', function () {
+    document.getElementById('nav').classList.toggle('open');
+  });
+</script>
 <div class="breadcrumbs">
   <a href="index.html">Главная</a> <span class="breadcrumbs__separator">–</span> <span>Подборка</span>
 </div>
 
 <section class="podborka">
   <div class="podborka__container">
+    <div class="modal" id="modal-request">
+      <div class="modal__content">
+        <button class="modal__close" aria-label="Закрыть">✕</button>
+        <h3 class="modal__title">Введите следующие данные</h3>
+
+        <form class="modal__form">
+          <input type="text" placeholder="Ваше имя*" required />
+          <input type="email" placeholder="Ваш e-mail*" required />
+          <input type="tel" placeholder="Ваш телефон*" required />
+
+          <label class="modal__checkbox">
+            <input type="checkbox" required checked />
+            Даю согласие на <a href="#">обработку персональных данных</a>
+          </label>
+
+          <button type="submit" class="modal__submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal modal--thanks" id="thanksModal">
+      <div class="modal__content">
+        <button class="modal__close" onclick="closeThanksModal()">✕</button>
+        <h2 class="modal__title">Спасибо!</h2>
+        <p>Ваша заявка принята. В ближайшее время наш менеджер с Вами свяжется.</p>
+      </div>
+    </div>
+
+
     <h2 class="podborka__title">Подборка</h2>
 
     <div class="podborka__table">
@@ -81,14 +136,14 @@
         <div>
           <div class="podborka__counter">
             <button>-</button>
-            <span>1</span>
+            <span>2</span>
             <button>+</button>
           </div>
           <small>✓ В наличии</small>
         </div>
-        <div><strong>от 41 500 ₽</strong></div>
+        <div><strong>от 5 500 ₽</strong></div>
         <div>
-          <br><a href="#" class="podborka__delete">✕ Удалить</a>
+          <a href="#" class="podborka__delete">✕ Удалить</a>
         </div>
       </div>
     </div>
@@ -96,13 +151,14 @@
     <div class="podborka__footer">
       <a href="../html/catalog.html" class="podborka__back">← К покупкам</a>
       <div class="podborka__actions">
-        <button class="podborka__mail">Отправить подборку на почту</button>
         <a href="../html/dostavka.html"><button class="podborka__calculate">Отправить заявку на расчет</button></a>
+        <button class="podborka__mail">Отправить подборку на почту</button>
       </div>
-      <div class="podborka__total">Итого: от 44 800 ₽</div>
+      <div class="podborka__total">Итого: от 8 800 ₽</div>
     </div>
   </div>
 </section>
+
 
 
 <footer class="footer">
@@ -145,4 +201,57 @@
       </ul>
     </div>
   </div>
+
 </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const formModal = document.getElementById("modal-request");
+    const openBtn = document.querySelector(".podborka__calculate");
+    const closeFormBtn = formModal.querySelector(".modal__close");
+    const form = formModal.querySelector("form");
+
+    const thanksModal = document.getElementById("thanksModal");
+    const closeThanksBtn = thanksModal.querySelector(".modal__close");
+
+
+    openBtn?.addEventListener("click", function (e) {
+      if (window.innerWidth <= 901) {
+        e.preventDefault();
+        formModal.classList.add("active");
+      }
+    });
+
+
+    closeFormBtn?.addEventListener("click", () => {
+      formModal.classList.remove("active");
+    });
+
+
+    window.addEventListener("click", (e) => {
+      if (e.target === formModal) {
+        formModal.classList.remove("active");
+      }
+      if (e.target === thanksModal) {
+        thanksModal.classList.remove("active");
+      }
+    });
+
+
+    form?.addEventListener("submit", function (e) {
+      e.preventDefault();
+      formModal.classList.remove("active");
+      thanksModal.classList.add("active");
+    });
+
+
+    closeThanksBtn?.addEventListener("click", () => {
+      thanksModal.classList.remove("active");
+    });
+  });
+</script>
+
+
+
+
+</body>

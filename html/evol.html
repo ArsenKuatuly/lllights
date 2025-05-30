@@ -3,16 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../styles.css" />
-  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ll lights - Каталог</title>
 </head>
 <body>
 <header class="header">
   <div class="header__container">
     <div class="header__logo">
-      <a href="index.html"><img class="header__logo__img" src="../images/header/logo.png" alt="II lights logo"></a>
+      <a href="index.html">
+        <img class="header__logo__img" src="../images/header/logo.png" alt="II lights logo">
+      </a>
     </div>
 
-    <nav class="header__nav">
+
+    <button class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+
+    <nav class="header__nav" id="nav">
       <ul class="header__nav__list">
         <li><a href="company.html">О компании</a></li>
         <li><a href="uslugi.html">Услуги</a></li>
@@ -22,15 +33,32 @@
         <li class="header__nav__highlight"><a href="#">Подборка</a></li>
         <li><img class="header__nav__img" src="../images/header/plus.png"></li>
       </ul>
+
+
+      <div class="header__nav__contacts">
+        <a href="mailto:info@ii-lights.ru" class="contact email">
+          <img src="../images/header/mail.png" alt="Email"> info@ii-lights.ru
+        </a>
+        <a href="tel:+74952335557" class="contact phone">
+          <img src="../images/header/phone.png" alt="Phone"> +7 (495) 233 55 57
+        </a>
+      </div>
     </nav>
 
-    <div class="header__contacts">
-      <a href="mailto:info@ii-lights.ru" class="header__email"> info@ii-lights.ru</a>
-      <a href="tel:+74952335557" class="header__phone"> +7 (495) 233 55 57</a>
-    </div>
 
+    <div class="header__contacts">
+      <a href="mailto:info@ii-lights.ru" class="header__email">info@ii-lights.ru</a>
+      <a href="tel:+74952335557" class="header__phone">+7 (495) 233 55 57</a>
+    </div>
   </div>
 </header>
+
+<script>
+  document.getElementById('burger').addEventListener('click', function () {
+    document.getElementById('nav').classList.toggle('open');
+  });
+  </script>
+
 <div class="breadcrumbs">
   <a href="index.html">Главная</a> <span class="breadcrumbs__separator">–</span> <span>Evo L</span>
 </div>
@@ -54,7 +82,7 @@
         </div>
       </div>
 
-      <!-- Настройки модификации -->
+
       <div class="modification__details">
         <h2 class="modification__title">Трековый светильник EVO L</h2>
         <form class="modification__form">
@@ -116,45 +144,52 @@
 
 <section class="company">
   <div class="company__container">
-    <h2 class="company__title">Услуги</h2>
 
-    <div class="tabs">
-      <div class="tabs__header uslugi">
+    <div class="tabs" data-tabs>
+      <div class="tabs__header">
         <button class="tabs__button active" data-tab="tab-1">Описание</button>
         <button class="tabs__button" data-tab="tab-2">Технические характеристики</button>
         <button class="tabs__button" data-tab="tab-3">Конструктивные характеристики</button>
         <button class="tabs__button" data-tab="tab-4">Материалы для скачивания</button>
-
       </div>
 
       <div class="tabs__content">
-        <div id="tab-1" class="tabs__pane active">
-          <p>Потолочный светильник LINE A подвесного или накладного монтажа предназначен для организации основного освещения помещений. Различные длины, мощности, варианты рассеивателей и возможности подключения к различным системам управления освещением делают светильники серии LINE A всесторонне продуманным решением для помещений любой конфигурации и функциональных назначений.
-            Алюминиевый корпус окрашивается высококачественным матовым или глянцевым порошковым покрытием черного, белого, либо любого цвета по шкале RAL.
-          </p>
-          <p>Особенности:
-            - Различные варианты рассеивателей: матовый / микропризматический / прозрачный.
-            - Источники питания с гальвонической развязкой установлены внутри корпуса светильника;
-            - Возможность соединения последовательно для получения сплошных линий засветки длинной до 30м.
-            - Возможность декорирование под дерево и другие материалы, либо отделка деревом благородных пород
-          </p>
+        <div id="tab-1" class="tabs__pane active" data-accordion>
+          <button class="accordion__title">Описание</button>
+          <div class="accordion__content">
+            <p>Потолочный светильник LINE A подвесного или накладного монтажа предназначен для организации основного освещения помещений. Различные длины, мощности, варианты рассеивателей и возможности подключения к различным системам управления освещением делают светильники серии LINE A всесторонне продуманным решением для помещений любой конфигурации и функциональных назначений.
+              Алюминиевый корпус окрашивается высококачественным матовым или глянцевым порошковым покрытием черного, белого, либо любого цвета по шкале RAL.
+            </p>
+            <p>Особенности:
+              - Различные варианты рассеивателей: матовый / микропризматический / прозрачный.
+              - Источники питания с гальвонической развязкой установлены внутри корпуса светильника;
+              - Возможность соединения последовательно для получения сплошных линий засветки длинной до 30м.
+              - Возможность декорирование под дерево и другие материалы, либо отделка деревом благородных пород</p>
+          </div>
         </div>
-        <div id="tab-2" class="tabs__pane">
-          <p>Потолочный светильник LINE A подвесного или накладного монтажа предназначен для организации основного освещения помещений. Различные длины, мощности, варианты рассеивателей и возможности подключения к различным системам управления освещением делают светильники серии LINE A всесторонне продуманным решением для помещений любой конфигурации и функциональных назначений.
-            Алюминиевый корпус окрашивается высококачественным матовым или глянцевым порошковым покрытием черного, белого, либо любого цвета по шкале RAL.
-          </p>
+        <div id="tab-2" class="tabs__pane" data-accordion>
+          <button class="accordion__title">Технические характеристики</button>
+          <div class="accordion__content">
+            <p>Мы предоставляем комплекс услуг: от проектирования и подбора оборудования до реализации концепции освещения.</p>
+          </div>
         </div>
-        <div id="tab-3" class="tabs__pane">
-          <p>Обратившись в нашу компанию Вы, в первую очередь получите доброжелательный подход и профессиональный сервис в подборе оборудования для ваших задач. Мы поможем в проектировании, сделаем светотехнический расчет и осуществим поставку оборудования. Среди прочих услуг, которые мы оказываем можно выделить светодизайн, разработку концепции освещения, а так же мониторинг и модернизация существующих систем освещения. В состав проекта освещения входят расчет освещенности в специальных программах, предоставление планов расстановки осветительного оборудования и составление спецификации осветительных приборов. .</p>
+        <div id="tab-3" class="tabs__pane" data-accordion>
+          <button class="accordion__title">Конструктивные характеристики</button>
+          <div class="accordion__content">
+            <p>Мы поставляем оборудование от ведущих мировых и российских производителей для различных типов объектов.</p>
+          </div>
         </div>
-        <div id="tab-4" class="tabs__pane">
-          <p>Концепция освещения и светодизайн нужны для решения задач связанных с созданием художественной или особой атмосферы за счет света. Мониторинг и модернизация освещения могут быть полезны при переходе со стандартного освещения на светодиодное. Мы можем рассчитать энергоэффективность и продумать как модернизировать существующие светильники для повышения их яркости и эффективности.</p>
+        <div id="tab-4" class="tabs__pane" data-accordion>
+          <button class="accordion__title">Материалы для скачивания</button>
+          <div class="accordion__content">
+            <p>Реквизиты компании доступны по запросу. Свяжитесь с нами для получения подробной информации.</p>
+          </div>
         </div>
-
       </div>
     </div>
   </div>
 </section>
+
 
 <section class="modification-table">
   <div class="modification-table__container">
@@ -253,6 +288,55 @@
 </section>
 
 
+<section class="modification-mobile">
+  <h2 class="modification-table__title">Выбранные модификации</h2>
+
+  <div class="modification-mobile__item">
+    <button class="modification-mobile__item-header">LINE A 50-14W-830-WH</button>
+    <div class="modification-mobile__item-body">
+      <ul>
+        <li><strong>Мощность:</strong> 14</li>
+        <li><strong>Цвет корпуса:</strong> Белый</li>
+        <li><strong>Габариты:</strong> 20x15x10</li>
+        <li><strong>Световой поток:</strong> 1672</li>
+        <li><strong>Угол рассеивания:</strong> 119.43</li>
+        <li><strong>Эффективность:</strong> 180.75</li>
+        <li><strong>Цветовая температура:</strong> 3000</li>
+        <li><strong>CRI/Ra:</strong> 80+</li>
+        <li><strong>Управление светом:</strong> no</li>
+      </ul>
+      <div class="footer">
+        <div class="price">Цена <strong>2600</strong></div>
+        <a href="../html/podborka.html" class="add"><span>+</span> Добавить в подборку</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modification-mobile__item">
+    <button class="modification-mobile__item-header">LINE A 50-14W-830-WH</button>
+    <div class="modification-mobile__item-body">
+      <ul>
+        <li><strong>Мощность:</strong> 14</li>
+        <li><strong>Цвет корпуса:</strong> Белый</li>
+        <li><strong>Габариты:</strong> 20x15x10</li>
+        <li><strong>Световой поток:</strong> 1672</li>
+        <li><strong>Угол рассеивания:</strong> 119.43</li>
+        <li><strong>Эффективность:</strong> 180.75</li>
+        <li><strong>Цветовая температура:</strong> 3000</li>
+        <li><strong>CRI/Ra:</strong> 80+</li>
+        <li><strong>Управление светом:</strong> no</li>
+      </ul>
+      <div class="footer">
+        <div class="price">Цена <strong>2600</strong></div>
+        <a href="../html/podborka.html" class="add"><span>+</span> Добавить в подборку</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
 
 
 <footer class="footer">
@@ -300,6 +384,8 @@
 
 <script src="../javascript/evol.js"></script>
 <script src="../javascript/company.js"></script>
+<script src="../javascript/accordeon.js"></script>
+<script src="../javascript/selected-modification.js"></script>
 
 </body>
 </html>

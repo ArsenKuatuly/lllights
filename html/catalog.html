@@ -3,16 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../styles.css" />
-  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ll lights - Каталог</title>
 </head>
 <body>
 <header class="header">
   <div class="header__container">
     <div class="header__logo">
-      <a href="index.html"><img class="header__logo__img" src="../images/header/logo.png" alt="II lights logo"></a>
+      <a href="index.html">
+        <img class="header__logo__img" src="../images/header/logo.png" alt="II lights logo">
+      </a>
     </div>
 
-    <nav class="header__nav">
+
+    <button class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+
+    <nav class="header__nav" id="nav">
       <ul class="header__nav__list">
         <li><a href="company.html">О компании</a></li>
         <li><a href="uslugi.html">Услуги</a></li>
@@ -22,15 +33,31 @@
         <li class="header__nav__highlight"><a href="#">Подборка</a></li>
         <li><img class="header__nav__img" src="../images/header/plus.png"></li>
       </ul>
+
+
+      <div class="header__nav__contacts">
+        <a href="mailto:info@ii-lights.ru" class="contact email">
+          <img src="../images/header/mail.png" alt="Email"> info@ii-lights.ru
+        </a>
+        <a href="tel:+74952335557" class="contact phone">
+          <img src="../images/header/phone.png" alt="Phone"> +7 (495) 233 55 57
+        </a>
+      </div>
     </nav>
 
-    <div class="header__contacts">
-      <a href="mailto:info@ii-lights.ru" class="header__email"> info@ii-lights.ru</a>
-      <a href="tel:+74952335557" class="header__phone"> +7 (495) 233 55 57</a>
-    </div>
 
+    <div class="header__contacts">
+      <a href="mailto:info@ii-lights.ru" class="header__email">info@ii-lights.ru</a>
+      <a href="tel:+74952335557" class="header__phone">+7 (495) 233 55 57</a>
+    </div>
   </div>
 </header>
+
+<script>
+  document.getElementById('burger').addEventListener('click', function () {
+    document.getElementById('nav').classList.toggle('open');
+  });
+</script>
 <div class="breadcrumbs">
   <a href="index.html">Главная</a> <span class="breadcrumbs__separator">–</span> <span>Каталог</span>
 </div>
@@ -58,8 +85,9 @@
 
 
 
-          <div class="products__content catalog_content">
-            <aside class="filter">
+          <div class="products__content catalog_content adaptive-catalog">
+
+          <aside class="filter">
               <div class="filter__header">
                 <h3>Фильтр</h3>
                 <img class="filter__img" src="../images/catalog/filter.png" alt="filter">
@@ -107,105 +135,105 @@
             <div class="product-novinki">
               <h2 class="products__title catalog_title">Новинки</h2>
               <div class="product__cards">
-            <div class="product-card catalog_card">
-              <div class="product-card__label">Вт</div>
-              <img src="../images/products/img1.png" alt="Светильник 1" class="product-card__image" />
-              <h3 class="product-card__title">Дизайнерский светильник<br>изготавливаемый по проекту</h3>
-              <ul class="product-card__features">
-                <li>Длина до 3 метров.</li>
-                <li>Углы поворота между секторами по проекту.</li>
-                <li>Мощность рассчитывается индивидуально.</li>
-              </ul>
-              <div class="product-card__price">21 300 ₽</div>
-              <div class="product-card__footer">
-                <a href="evol.html"><button class="product-card__button">Подробнее</button></a>
-                <span class="product-card__icon">+</span>
-              </div>
-            </div>
+                <div class="product-card catalog_card">
+                  <div class="product-card__label">Вт</div>
+                  <img src="../images/products/img1.png" alt="Светильник 1" class="product-card__image" />
+                  <h3 class="product-card__title">Дизайнерский светильник<br>изготавливаемый по проекту</h3>
+                  <ul class="product-card__features">
+                    <li>Длина до 3 метров.</li>
+                    <li>Углы поворота между секторами по проекту.</li>
+                    <li>Мощность рассчитывается индивидуально.</li>
+                  </ul>
+                  <div class="product-card__price">21 300 ₽</div>
+                  <div class="product-card__footer">
+                    <a href="evol.html"><button class="product-card__button">Подробнее</button></a>
+                    <span class="product-card__icon">+</span>
+                  </div>
+                </div>
 
-            <div class="product-card catalog_card">
-              <div class="product-card__label">Вт</div>
-              <img src="../images/products/img2.png" alt="Светильник 1" class="product-card__image__img2" />
-              <h3 class="product-card__title">Дизайнерский светильник<br>изготавливаемый по проекту</h3>
-              <ul class="product-card__features">
-                <li>Длина до 3 метров.</li>
-                <li>Углы поворота между секторами по проекту.</li>
-                <li>Мощность рассчитывается индивидуально.</li>
-              </ul>
-              <div class="product-card__price">41 500 ₽</div>
-              <div class="product-card__footer">
-                <a href="evol.html"><button class="product-card__button">Подробнее</button></a>
-                <span class="product-card__icon">+</span>
-              </div>
-            </div>
+                <div class="product-card catalog_card">
+                  <div class="product-card__label">Вт</div>
+                  <img src="../images/products/img2.png" alt="Светильник 1" class="product-card__image__img2" />
+                  <h3 class="product-card__title">Дизайнерский светильник<br>изготавливаемый по проекту</h3>
+                  <ul class="product-card__features">
+                    <li>Длина до 3 метров.</li>
+                    <li>Углы поворота между секторами по проекту.</li>
+                    <li>Мощность рассчитывается индивидуально.</li>
+                  </ul>
+                  <div class="product-card__price">41 500 ₽</div>
+                  <div class="product-card__footer">
+                    <a href="evol.html"><button class="product-card__button">Подробнее</button></a>
+                    <span class="product-card__icon">+</span>
+                  </div>
+                </div>
 
-            <div class="product-card catalog_card">
-              <div class="product-card__label">Вт</div>
-              <img src="../images/products/img1.png" alt="Светильник 1" class="product-card__image" />
-              <h3 class="product-card__title">Дизайнерский светильник<br>изготавливаемый по проекту</h3>
-              <ul class="product-card__features">
-                <li>Длина до 3 метров.</li>
-                <li>Углы поворота между секторами по проекту.</li>
-                <li>Мощность рассчитывается индивидуально.</li>
-              </ul>
-              <div class="product-card__price">21 800 ₽</div>
-              <div class="product-card__footer">
-                <a href="evol.html"><button class="product-card__button">Подробнее</button></a>
-                <span class="product-card__icon">+</span>
-              </div>
-            </div>
+                <div class="product-card catalog_card">
+                  <div class="product-card__label">Вт</div>
+                  <img src="../images/products/img1.png" alt="Светильник 1" class="product-card__image" />
+                  <h3 class="product-card__title">Дизайнерский светильник<br>изготавливаемый по проекту</h3>
+                  <ul class="product-card__features">
+                    <li>Длина до 3 метров.</li>
+                    <li>Углы поворота между секторами по проекту.</li>
+                    <li>Мощность рассчитывается индивидуально.</li>
+                  </ul>
+                  <div class="product-card__price">21 800 ₽</div>
+                  <div class="product-card__footer">
+                    <a href="evol.html"><button class="product-card__button">Подробнее</button></a>
+                    <span class="product-card__icon">+</span>
+                  </div>
+                </div>
 
                 <div class="product-catalog">
                   <h2 class="products__title catalog_title">Весь каталог</h2>
                   <div class="product__cards">
-                <div class="product-card catalog_card">
-                  <div class="product-card__label">Вт</div>
-                  <img src="../images/products/img1.png" alt="Светильник 1" class="product-card__image" />
-                  <h3 class="product-card__title">Дизайнерский светильник<br>изготавливаемый по проекту</h3>
-                  <ul class="product-card__features">
-                    <li>Длина до 3 метров.</li>
-                    <li>Углы поворота между секторами по проекту.</li>
-                    <li>Мощность рассчитывается индивидуально.</li>
-                  </ul>
-                  <div class="product-card__price">21 800 ₽</div>
-                  <div class="product-card__footer">
-                    <a href="evol.html"><button class="product-card__button">Подробнее</button></a>
-                    <span class="product-card__icon">+</span>
-                  </div>
-                </div>
+                    <div class="product-card catalog_card">
+                      <div class="product-card__label">Вт</div>
+                      <img src="../images/products/img1.png" alt="Светильник 1" class="product-card__image" />
+                      <h3 class="product-card__title">Дизайнерский светильник<br>изготавливаемый по проекту</h3>
+                      <ul class="product-card__features">
+                        <li>Длина до 3 метров.</li>
+                        <li>Углы поворота между секторами по проекту.</li>
+                        <li>Мощность рассчитывается индивидуально.</li>
+                      </ul>
+                      <div class="product-card__price">21 800 ₽</div>
+                      <div class="product-card__footer">
+                        <a href="evol.html"><button class="product-card__button">Подробнее</button></a>
+                        <span class="product-card__icon">+</span>
+                      </div>
+                    </div>
 
 
-                <div class="product-card catalog_card">
-                  <div class="product-card__label">Вт</div>
-                  <img src="../images/products/img1.png" alt="Светильник 1" class="product-card__image" />
-                  <h3 class="product-card__title">Дизайнерский светильник<br>изготавливаемый по проекту</h3>
-                  <ul class="product-card__features">
-                    <li>Длина до 3 метров.</li>
-                    <li>Углы поворота между секторами по проекту.</li>
-                    <li>Мощность рассчитывается индивидуально.</li>
-                  </ul>
-                  <div class="product-card__price">21 800 ₽</div>
-                  <div class="product-card__footer">
-                    <a href="evol.html"><button class="product-card__button">Подробнее</button></a>
-                    <span class="product-card__icon">+</span>
-                  </div>
-                </div>
+                    <div class="product-card catalog_card">
+                      <div class="product-card__label">Вт</div>
+                      <img src="../images/products/img1.png" alt="Светильник 1" class="product-card__image" />
+                      <h3 class="product-card__title">Дизайнерский светильник<br>изготавливаемый по проекту</h3>
+                      <ul class="product-card__features">
+                        <li>Длина до 3 метров.</li>
+                        <li>Углы поворота между секторами по проекту.</li>
+                        <li>Мощность рассчитывается индивидуально.</li>
+                      </ul>
+                      <div class="product-card__price">21 800 ₽</div>
+                      <div class="product-card__footer">
+                        <a href="evol.html"><button class="product-card__button">Подробнее</button></a>
+                        <span class="product-card__icon">+</span>
+                      </div>
+                    </div>
 
-                <div class="product-card catalog_card">
-                  <div class="product-card__label">Вт</div>
-                  <img src="../images/products/img1.png" alt="Светильник 1" class="product-card__image" />
-                  <h3 class="product-card__title">Дизайнерский светильник<br>изготавливаемый по проекту</h3>
-                  <ul class="product-card__features">
-                    <li>Длина до 3 метров.</li>
-                    <li>Углы поворота между секторами по проекту.</li>
-                    <li>Мощность рассчитывается индивидуально.</li>
-                  </ul>
-                  <div class="product-card__price">21 800 ₽</div>
-                  <div class="product-card__footer">
-                    <a href="evol.html"><button class="product-card__button">Подробнее</button></a>
-                    <span class="product-card__icon">+</span>
-                  </div>
-                </div>
+                    <div class="product-card catalog_card">
+                      <div class="product-card__label">Вт</div>
+                      <img src="../images/products/img1.png" alt="Светильник 1" class="product-card__image" />
+                      <h3 class="product-card__title">Дизайнерский светильник<br>изготавливаемый по проекту</h3>
+                      <ul class="product-card__features">
+                        <li>Длина до 3 метров.</li>
+                        <li>Углы поворота между секторами по проекту.</li>
+                        <li>Мощность рассчитывается индивидуально.</li>
+                      </ul>
+                      <div class="product-card__price">21 800 ₽</div>
+                      <div class="product-card__footer">
+                        <a href="evol.html"><button class="product-card__button">Подробнее</button></a>
+                        <span class="product-card__icon">+</span>
+                      </div>
+                    </div>
 
                     <div class="product-card catalog_card">
                       <div class="product-card__label">Вт</div>
@@ -256,28 +284,28 @@
                         <span class="product-card__icon">+</span>
                       </div>
                     </div>
+                  </div>
+                </div></div>
             </div>
-              </div></div>
           </div>
-        </div>
 
-        <div id="tab-2" class="tabs__pane">
-          <p>Мы предоставляем полный комплекс услуг в освещении от идеи до поставки: проектируем, подбираем оборудование, разрабатываем концепцию освещения и осуществляем поставку.
-            Основная наша специализация - это коммерческое освещение, т.е. поставки освещения для тех мест, где люди работают, занимаются спортом, совершают покупки, проводят досуг и отдыхают. А стилистические направления, которые мы охватываем начинаются со специальных светильников для функционального использования и доходят до дизайнерских светильников от всемирно известных производителей.
-          </p>
-        </div>
-        <div id="tab-3" class="tabs__pane">
-          <p>Обратившись в нашу компанию Вы, в первую очередь получите доброжелательный подход и профессиональный сервис в подборе оборудования для ваших задач. Мы поможем в проектировании, сделаем светотехнический расчет и осуществим поставку оборудования. Среди прочих услуг, которые мы оказываем можно выделить светодизайн, разработку концепции освещения, а так же мониторинг и модернизация существующих систем освещения. В состав проекта освещения входят расчет освещенности в специальных программах, предоставление планов расстановки осветительного оборудования и составление спецификации осветительных приборов. .</p>
-        </div>
-        <div id="tab-4" class="tabs__pane">
-          <p>Концепция освещения и светодизайн нужны для решения задач связанных с созданием художественной или особой атмосферы за счет света. Мониторинг и модернизация освещения могут быть полезны при переходе со стандартного освещения на светодиодное. Мы можем рассчитать энергоэффективность и продумать как модернизировать существующие светильники для повышения их яркости и эффективности.</p>
-        </div>
-        <div id="tab-5" class="tabs__pane">
-          <p>Реквизиты компании доступны по запросу. Свяжитесь с нами для получения подробной информации.</p>
+          <div id="tab-2" class="tabs__pane">
+            <p>Мы предоставляем полный комплекс услуг в освещении от идеи до поставки: проектируем, подбираем оборудование, разрабатываем концепцию освещения и осуществляем поставку.
+              Основная наша специализация - это коммерческое освещение, т.е. поставки освещения для тех мест, где люди работают, занимаются спортом, совершают покупки, проводят досуг и отдыхают. А стилистические направления, которые мы охватываем начинаются со специальных светильников для функционального использования и доходят до дизайнерских светильников от всемирно известных производителей.
+            </p>
+          </div>
+          <div id="tab-3" class="tabs__pane">
+            <p>Обратившись в нашу компанию Вы, в первую очередь получите доброжелательный подход и профессиональный сервис в подборе оборудования для ваших задач. Мы поможем в проектировании, сделаем светотехнический расчет и осуществим поставку оборудования. Среди прочих услуг, которые мы оказываем можно выделить светодизайн, разработку концепции освещения, а так же мониторинг и модернизация существующих систем освещения. В состав проекта освещения входят расчет освещенности в специальных программах, предоставление планов расстановки осветительного оборудования и составление спецификации осветительных приборов. .</p>
+          </div>
+          <div id="tab-4" class="tabs__pane">
+            <p>Концепция освещения и светодизайн нужны для решения задач связанных с созданием художественной или особой атмосферы за счет света. Мониторинг и модернизация освещения могут быть полезны при переходе со стандартного освещения на светодиодное. Мы можем рассчитать энергоэффективность и продумать как модернизировать существующие светильники для повышения их яркости и эффективности.</p>
+          </div>
+          <div id="tab-5" class="tabs__pane">
+            <p>Реквизиты компании доступны по запросу. Свяжитесь с нами для получения подробной информации.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 </section>
 
@@ -328,5 +356,6 @@
 <script src="../javascript/catalog.js"></script>
 <script src="../javascript/company.js"></script>
 <script src="../javascript/services-plus.js"></script>
+<script src="../javascript/accordeon.js"></script>
 </body>
 </html>
