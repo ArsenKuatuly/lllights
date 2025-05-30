@@ -1757,6 +1757,11 @@ input[type=range]::-moz-range-thumb {
   }
 }
 
+@media (max-width: 553px) {
+  .podborka {
+    padding: 2rem 10px !important;
+  }
+}
 .modal {
   position: fixed;
   z-index: 1000;
